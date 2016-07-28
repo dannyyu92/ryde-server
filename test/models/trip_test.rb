@@ -97,6 +97,24 @@ describe Trip do
     trip.must_be :valid?
   end
 
+  it "must not have a cc number less than 4 digits" do 
+    trip = FactoryGirl.build(
+      :trip, 
+      payment_method_type: PaymentMethod::VISA, 
+      cc_last_4: "123"
+    )
+    trip.wont_be :valid?
+  end
+
+  it "must not have a cc number more than 4 digits" do 
+    trip = FactoryGirl.build(
+      :trip, 
+      payment_method_type: PaymentMethod::VISA, 
+      cc_last_4: "12345"
+    )
+    trip.wont_be :valid?
+  end
+
   it "must have a driver" do 
     trip = FactoryGirl.build(
       :trip, 

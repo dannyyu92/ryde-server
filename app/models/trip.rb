@@ -27,6 +27,7 @@ class Trip < ApplicationRecord
 
   validates :cc_last_4, 
     presence: true, 
+    length: { minimum: 4, maximum: 4 }, 
     if: :payment_method_is_credit_card?
 
   validates :driver, 
