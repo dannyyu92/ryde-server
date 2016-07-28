@@ -10,8 +10,9 @@ Build a `GET /trips` API that powers the trip list view for a ride-sharing web a
 
 ### Setting Up Postgresql
 `psql`  
-`CREATE ROLE ryde_admin`  
+`CREATE ROLE ryde_admin;`  
 `ALTER ROLE ryde_admin WITH LOGIN CREATEDB REPLICATION SUPERUSER;`  
+
 `\q`
 `rake db:migrate`  
 `rake db:setup`  
@@ -40,7 +41,7 @@ The API uses a subdomain so if you wish to run this code localle, in your `/etc/
 
 ## The API
 
-All requests to the API should be done through the subdomain: `http://devapi.localhost.local:{PORT#}/`
+All requests to the API should be done through the subdomain: `http://devapi.localhost.local:{PORT#}/`  
 All API requests default to using an accept header with `application/com.ryde.v1` unless otherwise specified.
 
 ### Standard Response Structure
