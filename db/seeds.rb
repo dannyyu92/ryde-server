@@ -19,3 +19,14 @@ driver_abdul = Driver.find_or_create_by(
 driver_tuong = Driver.find_or_create_by(
   name: "Tuong"
 )
+
+puts ">>> Creating trips"
+trip1 = Trip.find_or_create_by(
+  pickup_date: DateTime.new(2016, 5, 13), 
+  driver: driver_manouchehr, 
+  fare: 7.00, 
+  car: "uberPOOL", 
+  city: "San Francisco", 
+  payment_method_type: "visa", 
+  cc_last_4: "8699", 
+)
