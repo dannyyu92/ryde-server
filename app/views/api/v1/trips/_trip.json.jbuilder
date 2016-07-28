@@ -7,3 +7,4 @@ json.car trip.car
 json.city trip.city
 json.payment_method_type trip.payment_method_type
 json.cc_last_4 trip.cc_last_4 if trip.cc_last_4.present?
+json.created_at trip.created_at

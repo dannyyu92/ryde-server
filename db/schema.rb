@@ -40,4 +40,5 @@ ActiveRecord::Schema.define(version: 20160728035417) do
     t.index ["driver_id"], name: "index_trips_on_driver_id", using: :btree
   end
 
+  add_foreign_key "trips", "drivers"
 end

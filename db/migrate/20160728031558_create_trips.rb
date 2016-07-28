@@ -9,7 +9,7 @@ class CreateTrips < ActiveRecord::Migration[5.0]
       t.string :payment_method_type, null: false
       t.string :cc_last_4
 
-      t.references :driver, index: true, null: false
+      t.references :driver, index: true, null: false, foreign_key: true
       t.timestamps
     end
   end
