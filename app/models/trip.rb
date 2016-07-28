@@ -32,6 +32,9 @@ class Trip < ApplicationRecord
     to: :driver, 
     prefix: true
 
+  # Scopes
+  scope :by_descending_pickup_date, -> { order(pickup_date: :desc) }
+
   private
   def set_defaults
     self.surge ||= false

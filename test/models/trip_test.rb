@@ -88,4 +88,14 @@ describe Trip do
     trip.driver_name.wont_be :blank?
   end
 
+  it "must be able to order trips by descending pickup date" do 
+    trip1 = FactoryGirl.build(:trip)
+    trip2 = FactoryGirl.build(
+      :trip, 
+      pickup_date: 1.day.ago
+    )
+    trips = Trip.by_descending_pickup_date
+    trip1.pickup_date.must_be :>=, trip2.pickup_date
+  end
+
 end
