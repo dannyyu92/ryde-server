@@ -1,5 +1,8 @@
 class Driver < ApplicationRecord
 
+  # Associations
+  has_many :trips
+
   # Validations
   validates :name, 
     presence: true, 
