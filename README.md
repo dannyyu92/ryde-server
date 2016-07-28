@@ -26,7 +26,7 @@ To run this code, you must have Rails 5.0 and Ruby 2.3.1 installed. Then you jus
 `rake db:setup db:migrate db:seed`  
 
 ### Hosts Files
-The API uses a subdomain so if you wish to run this code localle, in your `/etc/hosts` file, you should add:  
+The API uses a subdomain so if you wish to run this code locally, in your `/etc/hosts` file, you should add:  
 
 ```
 127.0.0.1       api.localhost.local
@@ -38,7 +38,7 @@ Run `rails s -p [port#]` to start the server.
 
 ## The API
 
-All requests to the API should be done through the subdomain: `http://devapi.localhost.local:{PORT#}/`  
+All local requests to the API should be done through the subdomain: `http://devapi.localhost.local:{PORT#}/`  
 All API requests default to using an accept header with `application/com.ryde.v1` unless otherwise specified.
 
 ### Standard Response Structure
