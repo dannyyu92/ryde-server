@@ -1,24 +1,19 @@
-# README
+# Ryde-Server for Urbandoor.co
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+### Getting Started
 
-Things you may want to cover:
+## Setting Up Postgresql
+`psql`  
+`CREATE ROLE ryde_admin`  
+`ALTER ROLE ryde_admin WITH LOGIN CREATEDB REPLICATION SUPERUSER;`  
+'\q'
+`rake db:migrate`  
+`rake db:setup`  
 
-* Ruby version
+## Setting Up The Server
 
-* System dependencies
+`bundle install`  
+`rake db:setup db:migrate`  
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+## Running The Server
+Run `rails s -p [port#]` to start the server.
