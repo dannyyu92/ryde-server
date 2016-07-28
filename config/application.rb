@@ -26,5 +26,16 @@ module RydeServer
     # Middleware like session, flash, cookies can be added back manually.
     # Skip views, helpers and assets when generating a new resource.
     config.api_only = true
+
+    # Auto generate test files
+    config.generators do |g|
+      g.test_framework :minitest, spec: true, fixture: false
+    end
+
+    # Generate Factories instead of Fixtures
+    config.generators do |g|
+      g.factory_girl true
+    end
+
   end
 end
