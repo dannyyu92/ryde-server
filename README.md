@@ -29,3 +29,31 @@ To run this code, you must have Rails 5.0 and Ruby 2.3.1 installed. Then you jus
 
 ### Running The Server
 Run `rails s -p [port#]` to start the server.
+
+### Hosts Files
+The API uses a subdomain so in your `/etc/hosts` file, you should add:  
+
+```
+127.0.0.1       api.localhost.local
+127.0.0.1       devapi.localhost.local
+```
+
+## The API
+
+All requests to the API should be done through the subdomain: `http://devapi.localhost.local:{PORT#}/`
+All API requests default to using an accept header with `application/com.ryde.v1` unless otherwise specified.
+
+### Standard Response Structure
+
+The JSON response is modeled after the [JSend](https://labs.omniti.com/labs/jsend) Standard: 
+
+```
+{
+    status : 200,
+    data : {...}
+}
+
+```
+
+### GET /trips
+
