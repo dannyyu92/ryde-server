@@ -14,5 +14,4 @@ class TripDecorator < BaseDecorator
     (self.cc_last_4)? "**** #{self.cc_last_4}" : nil
   end
 
-
 end
