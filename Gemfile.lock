@@ -89,6 +89,8 @@ GEM
     nokogiri (1.6.8)
       mini_portile2 (~> 2.1.0)
       pkg-config (~> 1.1.7)
+    oj (2.17.1)
+    oj_mimic_json (1.0.1)
     pg (0.18.4)
     pkg-config (1.1.7)
     puma (3.6.0)
@@ -156,6 +158,8 @@ DEPENDENCIES
   minitest-rails
   minitest-reporters
   mocha
+  oj
+  oj_mimic_json
   pg (~> 0.18.4)
   puma (~> 3.0)
   rails (~> 5.0.0)
