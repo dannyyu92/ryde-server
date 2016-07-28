@@ -83,4 +83,9 @@ describe Trip do
     trip.wont_be :valid?
   end
 
+  it "must have a delegate to its driver's name" do 
+    trip = FactoryGirl.build(:trip)
+    trip.driver_name.wont_be :blank?
+  end
+
 end

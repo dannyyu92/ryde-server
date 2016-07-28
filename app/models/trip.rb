@@ -27,6 +27,11 @@ class Trip < ApplicationRecord
   validates :driver, 
     presence: true
 
+  # Delegates
+  delegate :name,
+    to: :driver, 
+    prefix: true
+
   private
   def set_defaults
     self.surge ||= false
