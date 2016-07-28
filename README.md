@@ -27,9 +27,6 @@ To run this code, you must have Rails 5.0 and Ruby 2.3.1 installed. Then you jus
 `bundle install`  
 `rake db:setup db:migrate db:seed`  
 
-### Running The Server
-Run `rails s -p [port#]` to start the server.
-
 ### Hosts Files
 The API uses a subdomain so if you wish to run this code localle, in your `/etc/hosts` file, you should add:  
 
@@ -37,6 +34,9 @@ The API uses a subdomain so if you wish to run this code localle, in your `/etc/
 127.0.0.1       api.localhost.local
 127.0.0.1       devapi.localhost.local
 ```
+
+### Running The Server
+Run `rails s -p [port#]` to start the server.
 
 ## The API
 
@@ -58,3 +58,7 @@ The JSON response is modeled after the [JSend](https://labs.omniti.com/labs/jsen
 ### GET /trips
 
 ![Trips screen shot](resources/trips_json.png)
+
+## Running Test Suite
+
+The code uses Minitest for its test suite. To run, just type `rake test` into your terminal. Tests include model tests and API integration tests. 
