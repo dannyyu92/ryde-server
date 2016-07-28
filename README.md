@@ -31,7 +31,7 @@ To run this code, you must have Rails 5.0 and Ruby 2.3.1 installed. Then you jus
 Run `rails s -p [port#]` to start the server.
 
 ### Hosts Files
-The API uses a subdomain so in your `/etc/hosts` file, you should add:  
+The API uses a subdomain so if you wish to run this code localle, in your `/etc/hosts` file, you should add:  
 
 ```
 127.0.0.1       api.localhost.local
@@ -57,3 +57,4 @@ The JSON response is modeled after the [JSend](https://labs.omniti.com/labs/jsen
 
 ### GET /trips
 
+![Trips screen shot](resources/trips_json.png)
