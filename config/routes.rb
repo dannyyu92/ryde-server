@@ -8,6 +8,9 @@ Rails.application.routes.draw do
         # Configurations
         get "ping" => "configs#ping"
 
+        # Trips
+        get "trips" => "trips#index"
+
       end
     end
   end
