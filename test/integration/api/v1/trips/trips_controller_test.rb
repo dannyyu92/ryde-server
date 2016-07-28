@@ -44,8 +44,8 @@ describe Api::V1::TripsController do
     json_trip["fare"].must_equal trip.decorated_fare
     json_trip["car"].must_equal trip.car
     json_trip["city"].must_equal trip.city
-    json_trip["payment_method_type"].must_equal trip.payment_method_type
-    json_trip["cc_last_4"].must_equal trip.cc_last_4
+    json_trip["payment_method"]["payment_method_type"].must_equal trip.payment_method_type
+    json_trip["payment_method"]["credit_card_number"].must_equal trip.decorated_credit_card_number
     json_trip["created_at"].to_datetime.utc.to_s.must_equal trip.created_at.to_datetime.utc.to_s
   end
 

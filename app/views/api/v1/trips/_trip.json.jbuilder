@@ -9,7 +9,7 @@ json.city trip.city
 json.payment_method do 
   json.payment_method_type trip.payment_method_type
 
-  if trip.decorated_credit_card_number.present?
+  if trip.cc_last_4.present?
     json.credit_card_number trip.decorated_credit_card_number
   end
 end

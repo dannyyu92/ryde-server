@@ -29,7 +29,7 @@ trip1 = Trip.find_or_create_by(
   fare: 92.71, 
   car: "uberX", 
   city: "New York City", 
-  payment_method_type: "visa", 
+  payment_method_type: PaymentMethod::VISA, 
   cc_last_4: "8699", 
 )
 
@@ -39,7 +39,7 @@ trip2 = Trip.find_or_create_by(
   fare: 9.53, 
   car: "uberX", 
   city: "San Francisco", 
-  payment_method_type: "visa", 
+  payment_method_type: PaymentMethod::VISA, 
   cc_last_4: "8699", 
 )
 
@@ -49,6 +49,6 @@ trip3 = Trip.find_or_create_by(
   fare: 7.00, 
   car: "uberPOOL", 
   city: "San Francisco", 
-  payment_method_type: "visa", 
+  payment_method_type: PaymentMethod::VISA, 
   cc_last_4: "8699", 
 )

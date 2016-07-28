@@ -22,7 +22,12 @@ class Trip < ApplicationRecord
     presence: true
 
   validates :payment_method_type, 
-    presence: true
+    presence: true,
+    inclusion: { in: PaymentMethod::ALL_TYPES }
+
+  validates :cc_last_4, 
+    presence: true, 
+    if: :payment_method_is_credit_card?
 
   validates :driver, 
     presence: true
@@ -38,6 +43,10 @@ class Trip < ApplicationRecord
   private
   def set_defaults
     self.surge ||= false
+  end
+
+  def payment_method_is_credit_card?
+    PaymentMethod::CREDIT_CARDS.include? self.payment_method_type
   end
 
 end

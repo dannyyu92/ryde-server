@@ -72,9 +72,31 @@ describe Trip do
   end
 
   it "must have a valid payment method type" do 
-    raise "implement me"
+    trip = FactoryGirl.build(
+      :trip, 
+      payment_method_type: "incorrect_method", 
+    )
+    trip.wont_be :valid?
   end
   
+  it "must have last 4 cc numbers if payment method type is credit card" do 
+    trip = FactoryGirl.build(
+      :trip, 
+      payment_method_type: PaymentMethod::VISA, 
+      cc_last_4: nil
+    )
+    trip.wont_be :valid?
+  end
+
+  it "does not require last 4 cc numbers if payment method type is not credit card" do 
+    trip = FactoryGirl.build(
+      :trip, 
+      payment_method_type: PaymentMethod::PAYPAL, 
+      cc_last_4: nil
+    )
+    trip.must_be :valid?
+  end
+
   it "must have a driver" do 
     trip = FactoryGirl.build(
       :trip, 
