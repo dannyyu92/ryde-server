@@ -32,6 +32,7 @@ group :development, :test do
   gem "mocha"
   gem "database_cleaner"
   gem "factory_girl_rails", "~> 4.0"
+  gem "rack-test", require: "rack/test"
 end
 
 group :development do
