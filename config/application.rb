@@ -27,6 +27,9 @@ module RydeServer
     # Skip views, helpers and assets when generating a new resource.
     config.api_only = true
 
+    # Autoload 'lib' folder
+    config.autoload_paths += Dir["#{config.root}/lib/**/"]
+
     # Auto generate test files
     config.generators do |g|
       g.test_framework :minitest, spec: true, fixture: false
