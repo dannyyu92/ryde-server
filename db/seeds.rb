@@ -23,11 +23,12 @@ driver_tuong = Driver.find_or_create_by(
 puts ">>> Creating trips"
 
 trip1 = Trip.find_or_create_by(
-  pickup_date: DateTime.new(2016, 5, 13), 
-  driver: driver_manouchehr, 
-  fare: 7.00, 
-  car: "uberPOOL", 
-  city: "San Francisco", 
+  pickup_date: DateTime.new(2016, 4, 2), 
+  driver: driver_tuong, 
+  surge: true, 
+  fare: 92.71, 
+  car: "uberX", 
+  city: "New York City", 
   payment_method_type: "visa", 
   cc_last_4: "8699", 
 )
@@ -43,12 +44,11 @@ trip2 = Trip.find_or_create_by(
 )
 
 trip3 = Trip.find_or_create_by(
-  pickup_date: DateTime.new(2016, 4, 2), 
-  driver: driver_tuong, 
-  surge: true, 
-  fare: 92.71, 
-  car: "uberX", 
-  city: "New York City", 
+  pickup_date: DateTime.new(2016, 5, 13), 
+  driver: driver_manouchehr, 
+  fare: 7.00, 
+  car: "uberPOOL", 
+  city: "San Francisco", 
   payment_method_type: "visa", 
   cc_last_4: "8699", 
 )
