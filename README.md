@@ -12,7 +12,7 @@ Build a `GET /trips` API that powers the trip list view for a ride-sharing web a
 `psql`  
 `CREATE ROLE ryde_admin`  
 `ALTER ROLE ryde_admin WITH LOGIN CREATEDB REPLICATION SUPERUSER;`  
-'\q'
+`\q`
 `rake db:migrate`  
 `rake db:setup`  
 
